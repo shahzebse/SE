@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello,</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <script src="script.js"></script>
+  </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> 💖</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffe6eb, #ffd1dc);
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .box {
+      text-align: center;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #e6005c;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      margin: 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background-color: #ff4d79;
+      color: white;
+    }
+
+    #no {
+      background-color: #999;
+      color: white;
+      position: absolute;
+    }
+
+    #gif {
+      display: none;
+      margin-top: 20px;
+    }
+
+    img {
+      width: 250px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>mi amor,will you be my Valentine?❤️</h1>
+    <button id="yes">Yes 💖</button>
+    <button id="no">No 🙄</button>
+
+    <div id="gif">
+      <h2>I knew you'd say yes 😌💘</h2>
+      <p>Happy Valentine’s Day,Samia❤️</p>
+      <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNm4wZHMzZWJ6cmVjMXIwMm52djZnOXI0bHNmbjdtMnU5anljdWN6MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KVT0i8ls6Scp5X2255/giphy.gif">
+    </div>
+  </div>
+
+  <script>
+    const noButton = document.getElementById("no");
+    const yesButton = document.getElementById("yes");
+    const gifDiv = document.getElementById("gif");
+
+    noButton.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - 120);
+      const y = Math.random() * (window.innerHeight - 60);
+      noButton.style.left = x + "px";
+      noButton.style.top = y + "px";
+    });
+
+    yesButton.addEventListener("click", () => {
+      gifDiv.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
